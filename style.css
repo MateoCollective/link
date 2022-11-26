@@ -1,0 +1,206 @@
+html {
+  box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+body {
+  background-color: #1E2430;
+  font-family: Quicksand;
+}
+
+.wrapper {
+  font-family: 'Oswald', Arial, Helvetica;
+  letter-spacing: 0.075em;
+  text-align: center;
+}
+
+.image-cropper {
+  width: 100px;
+  height: 100px;
+  position: relative;
+  overflow: hidden;
+  border-radius: 50%;
+  margin: 30px auto -10px;
+  border: 3px solid #303B4D;
+
+}
+
+.image-cropper img {
+  display: inline;
+  margin: 0 auto;
+  height: 100%;
+  width: auto;
+}
+
+h3 {
+  color: #fff;
+}
+
+h1,
+h2,
+h2 a {
+  color: #bbb;
+  font-size: 1rem;
+  font-weight: 200;
+  border-color: transparent;
+  line-height: 1.25;
+  max-width: 100%;
+  display: block;
+  overflow: hidden;
+  text-decoration: none;
+}
+
+h1 {
+  color: #000;
+  font-size: 1.25rem;
+  margin-top: -10px;
+  margin-bottom: 0;
+}
+
+h2 {
+  margin-top: -15px;
+  margin-bottom: 40px;
+}
+
+.links {
+  width: 100%;
+  max-width: 414px;
+  margin: 0 auto;
+  padding: 0 5px;
+  font-size: 15px;
+
+}
+
+.links .link {
+  display: block;
+  width: 100%;
+  margin: 0 auto 15px;
+  color: #fff;
+  border: 2px solid #303B4D;
+  background-color: #303B4D;
+  text-align: center;
+  text-decoration: none;
+  padding: 15px;
+  border-radius: 10px;
+}
+
+.links .link:hover {
+  color: #4a6591;
+  background-color: transparent;
+}
+
+
+.warpper2 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.tab {
+  cursor: pointer;
+  padding: 10px 40px;
+  margin: 0px 2px;
+  display: inline-block;
+  color: #777d86;
+  font-weight: bold;
+}
+
+.panels {
+  min-height: 200px;
+  width: 100%;
+  max-width: 500px;
+  border-radius: 3px;
+  overflow: hidden;
+  padding: 20px;
+}
+
+.panel {
+  display: none;
+  animation: fadein .8s;
+}
+
+@keyframes fadein {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+
+
+.radio {
+  display: none;
+}
+
+#one:checked~.panels #one-panel,
+#two:checked~.panels #two-panel,
+#three:checked~.panels #three-panel {
+  display: block
+}
+
+#one:checked~.tabs #one-tab,
+#two:checked~.tabs #two-tab,
+#three:checked~.tabs #three-tab {
+  color: #ffffff;
+  border-bottom: 3px solid #4a6591;
+}
+
+.card {
+  /* Add shadows to create the "card" effect */
+  background-color: #303B4D;
+  border-radius: 10px;
+  color: #fff;
+  transition: 0.3s;
+  overflow: hidden;
+  margin: 5px;
+  margin-top: 15px;
+}
+.card img {
+  max-height: 100px;
+  object-fit: cover;
+  overflow: hidden;
+  
+}
+
+.card img:hover {
+  transform: scale(1.2);
+  filter: brightness(.5);
+  transition: 0.5s all ease-in-out;
+
+}
+
+
+/* On mouse-over, add a deeper shadow */
+.card:hover {
+
+}
+
+/* Add some padding inside the card container */
+.container {
+  padding: 0px 15px;
+}
+.container p {
+  font-size: 10px;
+  text-align: left;
+  margin-top: -10px;
+}
+.container h4 {
+  font-size: 14px;
+  text-align: left;
+}
+
+.footer {
+  color: #4a6591;
+  margin: 20px;
+  font-weight: 500;
+  font-size: 13px;
+  text-decoration: none;
+}
