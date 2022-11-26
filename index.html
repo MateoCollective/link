@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="description" content="Profile">
+  <meta name="keywords" content="Alfin, Alfin Firmansyah">
+  <meta name="author" content="Alfin Firmansyah">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta itemprop="image" content="img/profile.jpg" />
+  <link rel="icon" href="img/profile.jpg">
+  <title>Alfin Firmansyah</title>
+  <link rel="stylesheet" href="./style.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+    integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+  <div class="wrapper">
+
+    <div class="image-cropper">
+      <img src="profile.jpg" class="rounded" />
+    </div>
+
+    <h3>Alfin Firmansyah</h3>
+    <h2 class="user-name">
+      <a href="https://www.instagram.com/alfinsfh_/" class="ml3">@alfinsfh_ </a>
+    </h2>
+    <div class="warpper2">
+      <input class="radio" id="one" name="group" type="radio" checked>
+      <input class="radio" id="two" name="group" type="radio">
+      <input class="radio" id="three" name="group" type="radio">
+      <div class="tabs">
+        <label class="tab" id="one-tab" for="one"><i class="fa-solid fa-bars"></i></label>
+        <label class="tab" id="two-tab" for="two"><i class="fa-solid fa-diagram-project"></i></label>
+      </div>
+      <div class="panels">
+        <div class="panel" id="one-panel">
+          <div class="links">
+            <a href="https://www.instagram.com/alfinsfh_" class="link">Instagram</a>
+            <a href="https://www.facebook.com/" class="link">Facebook</a>
+            <a href="https://www.github.com/" class="link">Github</a>
+            <a href="https://www.twitter.com/" class="link">Twitter</a>
+            <a href="http://com" class="link">Visit My Website</a>
+          </div>
+        </div>
+        <div class="panel" id="two-panel">
+          <div class="card">
+            <img src="img/orschool.png" alt="Avatar" style="width:100%">
+            <div class="container">
+              <h4>Application to facilitate schools and students</h4>
+              <p>Design</p>
+            </div>
+          </div>
+          <div class="card">
+            <img src="img/caffef.png" alt="Avatar" style="width:100%">
+            <div class="container">
+              <h4>Coffe packaging design</h4>
+              <p>Design</p>
+            </div>
+          </div>
+          <div class="card">
+            <img src="img/Frame 1.jpg" alt="Avatar" style="width:100%">
+            <div class="container">
+              <h4>Designing shampoo products for animal</h4>
+              <p>Design</p>
+            </div>
+          </div>
+          <div class="card">
+            <img src="img/Untitled.jpg" alt="Avatar" style="width:100%">
+            <div class="container">
+              <h4>Designing a website for the animal community</h4>
+              <p>Design</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <a href="https://www.instagram.com/alfinsfh_" class="footer">Readmore</a>
+    </div>
+
+  </div>
+
+
+  </div>
+  <!-- partial -->
+
+  <script>
+    var textWrapper = document.querySelector('.ml3');
+    textWrapper.innerHTML = textWrapper.textContent.replace(/\S/g, "<span class='letter'>$&</span>");
+
+    anime.timeline({
+      loop: true
+    })
+      .add({
+        targets: '.ml3 .letter',
+        opacity: [0, 1],
+        easing: "easeInOutQuad",
+        duration: 2250,
+        delay: (el, i) => 150 * (i + 1)
+      }).add({
+        targets: '.ml3',
+        opacity: 0,
+        duration: 1000,
+        easing: "easeOutExpo",
+        delay: 1000
+      });
+  </script>
+</body>
+
+</html>
